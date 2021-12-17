@@ -1,9 +1,5 @@
 from enum import Enum
 
-file = 'tennis.txt'
-
-
-# class CodeDept(Enum):
 
 class CodeLigue(Enum):
     ARA = 50
@@ -57,4 +53,3 @@ with open("qualified_clubs.txt", 'r') as f:
         tennis_clubs.append(TennisClub(id=code_club, nom=nom_club, dept_no=dept, id_ligue=int(code_ligue)))
 
 print(tennis_clubs)
-
