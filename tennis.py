@@ -45,9 +45,7 @@ print(f'liste départements français et outre-mer: {depts}')
 tennis_clubs = []
 with open("qualified_clubs.txt", 'r') as f:
     for line in f:
-        # print(line.strip())
         code, nom_club = line.strip().split(' – ')
-        print(code, nom_club)
         code_ligue, dept, code_club = code.split(' ')
         nom_club = nom_club[:-6]
         tennis_clubs.append(TennisClub(id=code_club, nom=nom_club, dept_no=dept, id_ligue=int(code_ligue)))
